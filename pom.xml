@@ -19,6 +19,10 @@
 
 	<properties>
 		<java.version>11</java.version>
+
+		<org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
+		<org.projectlombok.version>1.18.20</org.projectlombok.version>
+		<org.projectlombok.binding.version>0.2.0</org.projectlombok.binding.version>
 	</properties>
 
 	<modules>
@@ -26,5 +30,24 @@
 		<module>app</module>
 		<module>app-api</module>
 	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>io.vavr</groupId>
+			<artifactId>vavr</artifactId>
+			<version>0.10.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>${org.mapstruct.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+			<version>${org.projectlombok.version}</version>
+		</dependency>
+	</dependencies>
 
 </project>

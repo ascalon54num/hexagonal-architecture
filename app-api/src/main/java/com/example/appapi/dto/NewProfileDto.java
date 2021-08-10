@@ -1,13 +1,13 @@
-package com.example.business.objects;
+package com.example.appapi.dto;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class NewProfile {
+public class NewProfileDto {
 
-    private String firstName;
+    private String sureName;
     private String lastName;
 
 }

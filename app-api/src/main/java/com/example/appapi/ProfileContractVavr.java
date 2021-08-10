@@ -2,18 +2,19 @@ package com.example.appapi;
 
 import com.example.appapi.dto.NewProfileDto;
 import com.example.appapi.dto.ProfileDto;
+import io.vavr.control.Try;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/profiles/v1/")
-public interface ProfileContract {
+public interface ProfileContractVavr {
 
     @GetMapping
-    List<ProfileDto> findAll();
+    Try<List<ProfileDto>> findAll();
 
     @PostMapping
-    ProfileDto create(@RequestBody NewProfileDto p);
+    Try<ProfileDto> create(@RequestBody NewProfileDto p);
 
 }

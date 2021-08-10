@@ -11,7 +11,7 @@ import java.util.List;
 
 @Component
 @RequiredArgsConstructor
-public class ProfileRepositoryAdapter implements ProfileRepositoryPort {
+public class ProfileJpaAdapter implements ProfileRepositoryPort {
 
     private final ProfilesRepositoryJpa repositoryJpa;
 
