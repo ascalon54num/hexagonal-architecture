@@ -1,0 +1,10 @@
+POST http://localhost:8080/profile/vavr
+Content-Type: application/json
+
+{
+  "sureName": "John.vavr",
+  "lastName": "Doe.vavr"
+}
+
+###
+GET http://localhost:8080/profile/vavr
