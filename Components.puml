@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+package "API" {
+  [Profile Contract]
+  [Profile Dtos]
+}
+
+package "Business" {
+  [Profile Service]
+}
+
+node "App" {
+  [Profile Http] --* [Profile Service]
+
+  [Profile Http] --|> [Profile Contract]
+  [Profile Http] --|> [Profile Dtos]
+
+  [Profile Jpa Adaptor] --> profiles
+
+  [Profile Service] -* [Profile Jpa Adaptor]
+}
+
+database "DB" {
+  folder "Profile table" as profiles {
+    [Profile 1, 2, ..]
+  }
+}
+
+Http -down-> [Profile Http]
+
+@enduml
