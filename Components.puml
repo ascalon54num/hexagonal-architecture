@@ -10,7 +10,7 @@ package "Business" {
   [Profile Service]
 }
 
-node "App" {
+package "App" {
   [Profile Http] --* [Profile Service]
 
   [Profile Http] --|> [Profile Contract]
