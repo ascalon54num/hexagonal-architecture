@@ -14,7 +14,7 @@ package "App" {
   [Profile Http] --* [Profile Service]
 
   [Profile Http] --|> [Profile Contract]
-  [Profile Http] --|> [Profile Dtos]
+  [Profile Http] --> [Profile Dtos]
 
   [Profile Jpa Adaptor] --> profiles
 
